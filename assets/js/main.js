@@ -99,7 +99,7 @@ function offCanvas() {
     var burger = jQuery('.burger');
     var canvasClose = jQuery('.canvas-close');
 
-    jQuery('.nav-list').slicknav({
+    jQuery('.main-menu .nav-list').slicknav({
         label: '',
         prependTo: '.mobile-menu',
     });

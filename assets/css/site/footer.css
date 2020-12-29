@@ -1,48 +1,103 @@
 .site-footer {
     display: flex;
+    margin: 1rem auto 0;
+    border-top: 1px solid var(--light-gray-color);
     justify-content: space-between;
-    align-items: center;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    align-items: flex-start;
+    padding: 40px 0;
     line-height: 1;
 }
 
-.copyright,
-.footer-social {
-    flex: 2;
+.site-footer .footer-column {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.site-footer .footer-column.left {
+    align-items: flex-start;
+    flex-direction: column;
+    -webkit-flex: 1 1 33.333%;
+    -moz-flex: 1 1 33.333%;
+    -ms-flex: 1 1 33.333%;
+    flex: 1 1 33.333%;
+}
+
+.site-footer .footer-column.center {
+    justify-content: center;
+    -webkit-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.site-footer .footer-column.right {
+    -webkit-flex: 1 1 33.333%;
+    -moz-flex: 1 1 33.333%;
+    -ms-flex: 1 1 33.333%;
+    flex: 1 1 33.333%;
+    justify-content: flex-end;
+}
+
+.footer-nav nav {
+    list-style-type: none;
+    letter-spacing: 1px;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+.footer-nav .menu-item-link {
+    color: var(--secondary-text-color);
+}
+
+.footer-nav nav li {
+    font-size: 11px;
+    color: var(--secondary-text-color);
+    margin: 0 35px;
 }
 
 .copyright {
-    font-size: 14px;
+    line-height: 1.5;
+    font-size: 11px;
+    padding: 0;
+    margin: 1rem 0 0;
+    text-align: center;
 }
 
 .copyright a {
     position: relative;
 }
 
-.footer-social {
-    margin-right: -7px;
-    text-align: right;
+
+.description-text {
+    letter-spacing: 0.3px;
+    color: var(--primary-text-color);
+    font-size: 1.1rem;
+    padding-top: 1vmin;
+    max-width: 280px;
 }
 
-.footer-social-item {
-    padding: 0 5px;
-    color: var(--secondary-text-color);
-    font-size: 18px;
+.dark-mode .description-text {
+    color: var(--dark-mode-primary-text-color);
 }
 
+.site-footer .footer-social-item {
+    font-size: 2rem;
+}
 @media (max-width: 767px) {
     .site-footer {
         flex-direction: column;
+        align-items: center;
     }
-
-    .copyright {
-        order: 1;
-        margin-top: 15px;
+    .site-footer .footer-column.left {
+        flex: 1 1 100%;
     }
-
-    .footer-social {
-        margin-top: 30px;
-        margin-right: 0;
+    .site-footer .footer-column.right {
+        flex: 1 1 100%;
+    }
+    .site-footer .footer-column.center {
+        flex: 1 1 100%;
     }
 }
