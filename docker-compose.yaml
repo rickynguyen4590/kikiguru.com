@@ -3,21 +3,22 @@ version: '3.1'
 services:
     node:
         image: node:14-alpine
-        restart: always
+        restart: unless-stopped
         working_dir: /var/lib/ghost/content/themes/kikiguru
+        volumes:
+            - .:/var/lib/ghost/content/themes/kikiguru
         command:
             - yarn
             - dev
-        volumes:
-            - .:/var/lib/ghost/content/themes/kikiguru
     ghost:
         image: ghost:3-alpine
-        restart: always
+        restart: unless-stopped
         volumes:
             - .:/var/lib/ghost/content/themes/kikiguru
         ports:
             - 8080:2368
         environment:
+            NODE_ENV: development
             # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
             database__client: mysql
             database__connection__host: mariadb

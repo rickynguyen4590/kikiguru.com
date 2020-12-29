@@ -1,25 +1,26 @@
-const {series, watch, src, dest, parallel} = require('gulp');
+const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload');
-var postcss = require('gulp-postcss');
-var zip = require('gulp-zip');
-var uglify = require('gulp-uglify');
-var beeper = require('beeper');
+const livereload = require('gulp-livereload');
+const gulpStylelint = require('gulp-stylelint');
+const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const zip = require('gulp-zip');
+const beeper = require('beeper');
 
 // postcss plugins
-var autoprefixer = require('autoprefixer');
-var colorFunction = require('postcss-color-mod-function');
-var cssnano = require('cssnano');
-var easyimport = require('postcss-easy-import');
+const easyimport = require('postcss-easy-import');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 function serve(done) {
     livereload.listen();
     done();
 }
 
-const handleError = (done) => {
+function handleError(done) {
     return function (err) {
         if (err) {
             beeper();
@@ -30,22 +31,19 @@ const handleError = (done) => {
 
 function hbs(done) {
     pump([
-        src(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs']),
+        src(['*.hbs', 'partials/**/*.hbs', 'members/**/*.hbs']),
         livereload()
     ], handleError(done));
 }
 
 function css(done) {
-    var processors = [
-        easyimport,
-        colorFunction(),
-        autoprefixer(),
-        cssnano()
-    ];
-
     pump([
-        src('assets/css/*.css', {sourcemaps: true}),
-        postcss(processors),
+        src('assets/css/screen.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            autoprefixer(),
+            cssnano()
+        ]),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
@@ -53,35 +51,52 @@ function css(done) {
 
 function js(done) {
     pump([
-        src('assets/js/*.js', {sourcemaps: true}),
+        src([
+            'assets/js/lib/*.js',
+            'assets/js/main.js'
+        ], {sourcemaps: true}),
+        concat('main.min.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
 
+function lint(done) {
+    pump([
+        src(['assets/css/**/*.css', '!assets/css/vendor/*']),
+        gulpStylelint({
+            fix: true,
+            reporters: [
+                {formatter: 'string', console: true}
+            ]
+        }),
+        dest('assets/css/')
+    ], handleError(done));
+}
+
 function zipper(done) {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
+    const filename = require('./package.json').name + '.zip';
 
     pump([
         src([
             '**',
             '!node_modules', '!node_modules/**',
-            '!dist', '!dist/**'
+            '!dist', '!dist/**',
+            '!yarn-error.log'
         ]),
         zip(filename),
-        dest(targetDir)
+        dest('dist/')
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/**', css);
-const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, hbsWatcher);
+const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', 'members/**/*.hbs'], hbs);
+const cssWatcher = () => watch('assets/css/**/*.css', css);
+const jsWatcher = () => watch('assets/js/**/*.js', js);
+const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
 const build = series(css, js);
-const dev = series(build, serve, watcher);
 
 exports.build = build;
+exports.lint = lint;
 exports.zip = series(build, zipper);
-exports.default = dev;
+exports.default = series(build, serve, watcher);

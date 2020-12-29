@@ -1,23 +1,15 @@
 {{!< default}}
 
-{{#post}}
-<article class="gh-article {{post_class}}">
-
-    <header class="gh-header gh-canvas">
-        <h1 class="gh-title">{{title}}</h1>
-
-        {{#if custom_excerpt}}
-            <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{#if feature_image}}
-            <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
-        {{/if}}
-    </header>
-
-    <div class="gh-content gh-canvas">
-        {{content}}
-    </div>
-
-</article>
-{{/post}}
+<div class="content-area">
+    <main class="site-main">
+        {{#post}}
+            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
+                {{> post-header single=true number_date=true big_title=true}}
+                {{> post-media}}
+                <div class="post-content kg-canvas u-text-format">
+                    {{content}}
+                </div>
+            </article>
+        {{/post}}
+    </main>
+</div>
