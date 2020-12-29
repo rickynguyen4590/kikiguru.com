@@ -29,8 +29,9 @@ html {
 
 body {
     color: var(--primary-text-color);
-    font-family: Muli, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.65;
     text-rendering: optimizeLegibility;
     word-break: break-word;

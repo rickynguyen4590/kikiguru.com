@@ -1,5 +1,4 @@
 var html = $('html');
-
 $(function () {
     darkMode();
     whiteLogo();
@@ -8,7 +7,14 @@ $(function () {
     gallery();
     author();
     offCanvas();
+    highlight();
 });
+
+function highlight() {
+    document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+    });
+}
 
 function darkMode() {
     $('.toggle-track').on('click', function () {
