@@ -114,12 +114,16 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace;
-
-    /* 1 */
-    font-size: 1em;
-
-    /* 2 */
+    font-family: 'Courier', monospace;
+    border-radius: 2px;
+    color: #272f33;
+    font-size: .8em;
+    line-height: 1em;
+    padding: 0 3px;
+    vertical-align: middle;
+    white-space: pre-wrap;
+    background: #f4f8fb;
+    border: 1px solid #e5eff5;
 }
 
 /**
