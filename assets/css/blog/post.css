@@ -92,12 +92,18 @@
 .post-link::before {
     position: absolute;
     left: 0;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: Alto, sans-serif;
 }
 
 .post-link.primary {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.post-link.primary::before {
+    content: "\e932";
+    left: -3px;
+    font-size: 14px;
 }
 
 .post-link.secondary {

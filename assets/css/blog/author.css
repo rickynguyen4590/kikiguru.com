@@ -42,7 +42,7 @@
 .author-name::after {
     content: "\e92e";
     margin-left: 1px;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: Alto, sans-serif;
     font-size: 19px;
 }
 
@@ -71,7 +71,7 @@
     top: -12px;
     left: 7px;
     color: var(--dark-gray-color);
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: Alto, sans-serif;
     font-size: 19px;
 }
 

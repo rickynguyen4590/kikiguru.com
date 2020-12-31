@@ -1,6 +1,12 @@
+@font-face {
+    font-family: "Alto";
+    src: url('../fonts/Alto.ttf') format('truetype'), url('../fonts/Alto.woff') format('woff'), url('../fonts/Alto.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 .icon:before {
   display: inline-block;
-  font: normal normal normal 24px/1 "Lato";
+  font: normal normal normal 24px/1 "Alto";
   font-size: inherit;
   text-rendering: auto;
   line-height: inherit;
