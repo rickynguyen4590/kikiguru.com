@@ -29,8 +29,8 @@ html {
 
 body {
     color: var(--primary-text-color);
-    font-family: 'Lato', Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.65;
     text-rendering: optimizeLegibility;
@@ -78,7 +78,7 @@ blockquote {
 }
 
 blockquote strong {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 ul,
