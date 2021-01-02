@@ -15,6 +15,7 @@ services:
         restart: unless-stopped
         volumes:
             - .:/var/lib/ghost/content/themes/kikiguru
+            - ./.images:/var/lib/ghost/content/images
         ports:
             - 8080:2368
         environment:

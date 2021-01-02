@@ -29,7 +29,7 @@ html {
 
 body {
     color: var(--primary-text-color);
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: 'Lato', 'Roboto', 'Arial', sans-serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.65;
@@ -111,7 +111,7 @@ figcaption {
 }
 
 pre {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 hr {
