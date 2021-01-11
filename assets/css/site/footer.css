@@ -46,7 +46,7 @@
     line-height: 2;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .footer-nav .menu-item-link {
     color: var(--secondary-text-color);
@@ -55,7 +55,7 @@
 .footer-nav nav li {
     font-size: 11px;
     color: var(--secondary-text-color);
-    margin: 0 35px;
+    margin: 0 25px;
 }
 
 .copyright {
@@ -69,7 +69,6 @@
 .copyright a {
     position: relative;
 }
-
 
 .description-text {
     letter-spacing: 0.3px;

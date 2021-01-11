@@ -7,10 +7,14 @@
     </div>
     <div class="footer-column center">
         <div class="footer-nav">
+            {{#if @site.secondary_navigation}}
             <nav class="footer-menu hidden-xs hidden-sm hidden-md">
-                {{navigation}}
+                {{navigation type="secondary"}}
             </nav>
-            <div class="copyright"><a href="https://korima.maltiv.com">KIKI guru</a> © 2021 - All rights reserved.<br>Published
+            {{/if}}
+            <div class="copyright">
+                 {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>
+                - &copy; All rights reserved.<br>Published
                 with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></div>
         </div>
     </div>
