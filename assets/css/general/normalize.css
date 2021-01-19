@@ -121,7 +121,6 @@ samp {
     line-height: 1.5em;
     padding: 0 3px;
     vertical-align: middle;
-    white-space: pre-wrap;
     background: #f4f8fb;
     border: 1px solid #e5eff5;
 }
