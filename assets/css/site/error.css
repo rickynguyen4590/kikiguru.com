@@ -1,8 +1,8 @@
-.error {
+.gh-error {
     text-align: center;
 }
 
-.error-code {
+.gh-error-code {
     margin-bottom: -5px;
     color: var(--dark-gray-color);
     font-size: 40px;
@@ -10,11 +10,15 @@
     letter-spacing: 2px;
 }
 
-.error-posts {
+.gh-error-posts {
     margin-top: 60px;
 }
 
-.error-link {
+.gh-error-link {
     color: var(--primary-color) !important;
     font-weight: 700;
+}
+
+.gh-error-content {
+    text-align: center;
 }
