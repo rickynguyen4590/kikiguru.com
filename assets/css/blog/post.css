@@ -167,6 +167,9 @@
 }
 
 @media (max-width: 767px) {
+    .post-image.u-object-fit{
+        object-fit: contain;
+    }
     .post-media.large {
         margin-bottom: 30px;
     }

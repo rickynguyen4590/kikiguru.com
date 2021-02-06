@@ -57,7 +57,7 @@
 }
 
 .u-hover-item {
-    transition: opacity 0.3s var(--animation-base);
+    transition: opacity 0.2s var(--animation-base);
 }
 
 .u-hover-wrapper:hover .u-hover-item {
@@ -214,6 +214,9 @@
 }
 
 @media (max-width: 767px) {
+    .u-placeholder {
+        background: none;
+    }
     .u-placeholder.horizontal::before {
         padding-bottom: 62.5%;
     }
