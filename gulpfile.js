@@ -38,7 +38,7 @@ function hbs(done) {
 
 function css(done) {
     pump([
-        src('assets/css/screen.css', {sourcemaps: true}),
+        src('assets/css/screen.css', {sourcemaps: false}),
         postcss([
             easyimport,
             autoprefixer(),
@@ -54,7 +54,7 @@ function js(done) {
         src([
             'assets/js/lib/*.js',
             'assets/js/main.js'
-        ], {sourcemaps: true}),
+        ], {sourcemaps: false}),
         concat('main.min.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),

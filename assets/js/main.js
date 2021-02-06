@@ -80,6 +80,7 @@ function carousel() {
     });
 }
 
+
 function video() {
     'use strict';
     $('.post-content').fitVids();
