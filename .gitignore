@@ -23,5 +23,6 @@ projectFilesBackup
 .DS_Store
 
 dist/
+assets/built/*.map
 
 docker-compose.override.yaml
