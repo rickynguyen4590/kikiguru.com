@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #49a8e4;
+    --primary-color: #622AE5;
     --primary-text-color: #333;
     --secondary-text-color: #48484a;
     --red-color: #ff7473;
@@ -30,13 +30,13 @@ html {
 body {
     color: var(--primary-text-color);
     font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.65;
     text-rendering: optimizeLegibility;
     word-break: break-word;
     background-color: var(--white-color);
-    /*transition: background-color 0.3s var(--animation-base);*/
+    font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
