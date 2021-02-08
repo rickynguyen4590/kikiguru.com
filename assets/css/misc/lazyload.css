@@ -5,5 +5,5 @@
 
 .lazyloaded {
     opacity: 1;
-    transition: opacity 0.4s var(--animation-base);
+    transition: opacity 0.3s var(--animation-base);
 }

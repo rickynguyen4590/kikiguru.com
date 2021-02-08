@@ -1,5 +1,6 @@
 var html = $('html');
 $(function () {
+    lazyLoad();
     darkMode();
     carousel();
     video();
@@ -10,8 +11,8 @@ $(function () {
 });
 
 function lazyLoad() {
-    window.lazySizesConfig = window.lazySizesConfig || {};
-    lazySizesConfig.init();
+    $('.kg-image').addClass('lazyload');
+    window.lazySizes.init()
 }
 
 function highlight() {
