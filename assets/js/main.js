@@ -1,7 +1,6 @@
 var html = $('html');
 $(function () {
     darkMode();
-    whiteLogo();
     carousel();
     video();
     gallery();
@@ -9,6 +8,11 @@ $(function () {
     offCanvas();
     highlight();
 });
+
+function lazyLoad() {
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    lazySizesConfig.init();
+}
 
 function highlight() {
     document.querySelectorAll('pre code').forEach((block) => {
@@ -29,12 +33,6 @@ function darkMode() {
     });
 }
 
-function whiteLogo() {
-    if (typeof gh_white_logo != 'undefined') {
-        var whiteImage = '<img class="logo-image white" src="' + gh_white_logo + '">';
-        $('.logo').append(whiteImage);
-    }
-}
 
 function carousel() {
     var carousel = $('.carousel');
@@ -79,7 +77,6 @@ function carousel() {
         },
     });
 }
-
 
 function video() {
     'use strict';
