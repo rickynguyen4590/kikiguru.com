@@ -1,6 +1,5 @@
 var html = $('html');
 $(function () {
-    lazyLoad();
     darkMode();
     carousel();
     video();
@@ -9,11 +8,6 @@ $(function () {
     offCanvas();
     highlight();
 });
-
-function lazyLoad() {
-    $('.kg-image').addClass('lazyload');
-    window.lazySizes.init()
-}
 
 function highlight() {
     document.querySelectorAll('pre code').forEach((block) => {
