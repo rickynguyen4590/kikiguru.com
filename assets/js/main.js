@@ -1,5 +1,6 @@
 var html = $('html');
 $(function () {
+    loadFb()
     darkMode();
     carousel();
     video();
@@ -8,6 +9,17 @@ $(function () {
     offCanvas();
     highlight();
 });
+
+function loadFb() {
+    setTimeout(function () {
+        var script = document.createElement('script');
+        script.crossOrigin = "anonymous";
+        script.async = true;
+        script.nonce = "hRevMNbZ";
+        script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=429146018231335";
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }, 3000);
+}
 
 function highlight() {
     document.querySelectorAll('pre code').forEach((block) => {
