@@ -57,10 +57,13 @@
 }
 
 .post-tag {
+    min-width: 50px;
+    display: inline-block;
     color: var(--primary-color);
 }
 
 .post-tag + .post-tag::before {
+    margin-right: 2px;
     content: ", ";
 }
 
