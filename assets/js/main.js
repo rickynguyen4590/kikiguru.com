@@ -1,6 +1,7 @@
 var html = $('html');
 $(function () {
     idle(loadFb);
+    idle(loadGG);
     darkMode();
     idle(carousel);
     video();
@@ -21,6 +22,24 @@ function loadFb() {
     script.nonce = "hRevMNbZ";
     script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=429146018231335";
     document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function loadGG() {
+    const script = document.createElement('script');
+    script.crossOrigin = "anonymous";
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-XZG88T09VQ";
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-XZG88T09VQ');
 }
 
 function highlight() {
