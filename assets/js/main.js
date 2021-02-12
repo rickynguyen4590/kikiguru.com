@@ -1,24 +1,26 @@
 var html = $('html');
 $(function () {
-    loadFb()
+    idle(loadFb);
     darkMode();
-    carousel();
+    idle(carousel);
     video();
     gallery();
     author();
-    offCanvas();
-    highlight();
+    idle(offCanvas);
+    idle(highlight);
 });
 
+function idle(cb) {
+    setTimeout(cb, 1000 + Math.random() * 4000);
+}
+
 function loadFb() {
-    setTimeout(function () {
-        var script = document.createElement('script');
-        script.crossOrigin = "anonymous";
-        script.async = true;
-        script.nonce = "hRevMNbZ";
-        script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=429146018231335";
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }, 3000);
+    const script = document.createElement('script');
+    script.crossOrigin = "anonymous";
+    script.async = true;
+    script.nonce = "hRevMNbZ";
+    script.src = "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=429146018231335";
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 function highlight() {
