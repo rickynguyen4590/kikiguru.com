@@ -3,6 +3,7 @@
 @import "general/grid.css";
 @import "general/button.css";
 @import "general/form.css";
+@import "general/icon.css";
 @import "site/header.css";
 @import "site/burger.css";
 @import "site/switch.css";
@@ -12,6 +13,9 @@
 @import "site/off-canvas.css";
 @import "site/footer.css";
 @import "site/error.css";
+@import "site/modal.css";
+@import "site/popular.css";
+@import "site/search.css";
 @import "blog/post.css";
 @import "blog/pagination.css";
 @import "blog/single.css";

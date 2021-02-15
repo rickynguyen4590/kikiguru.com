@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <script>
+        var siteUrl = '{{@site.url}}';
+    </script>
     {{ghost_head}}
 </head>
 
@@ -34,6 +37,8 @@
     <script async defer src="{{asset "built/main.min.js"}}"></script>
     {{{block "scripts"}}}
     <div id="fb-root"></div>
+    {{> icons}}
+    {{> modal}}
     {{ghost_foot}}
 </body>
 
