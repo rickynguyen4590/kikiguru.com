@@ -1,20 +1,22 @@
-<header class="site-header container">
-    <div class="navbar">
-        <div class="navbar-left">
-            <div class="burger hidden-lg hidden-xl"></div>
-            {{> logo}}
-            {{#if @site.navigation}}
-                <nav class="main-menu hidden-xs hidden-sm hidden-md">
-                    {{navigation}}
-                </nav>
-            {{/if}}
-        </div>
-        <div class="navbar-right">
-            <button class="button-icon js-modal" data-modal="search" aria-label="Search">
-                <svg class="icon">
-                    <use xlink:href="#magnify"></use>
-                </svg>
-            </button>
+<header class="site-header">
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-left">
+                <div class="burger hidden-lg hidden-xl"></div>
+                {{> logo}}
+                {{#if @site.navigation}}
+                    <nav class="main-menu hidden-xs hidden-sm hidden-md">
+                        {{navigation}}
+                    </nav>
+                {{/if}}
+            </div>
+            <div class="navbar-right">
+                <button class="button-icon js-modal" data-modal="search" aria-label="Search">
+                    <svg class="icon">
+                        <use xlink:href="#magnify"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </header>

@@ -1,13 +1,16 @@
 .site-header {
     backface-visibility: hidden;
     z-index: 80;
+    background-color: var(--white-color);
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04)
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 60px;
 }
 
 .navbar-left,
