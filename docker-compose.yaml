@@ -17,7 +17,7 @@ services:
             - .:/var/lib/ghost/content/themes/kikiguru
             - ./.images:/var/lib/ghost/content/images
         ports:
-            - 8080:2368
+            - 2368:2368
         environment:
             NODE_ENV: development
             # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
@@ -27,7 +27,7 @@ services:
             database__connection__password: example
             database__connection__database: ghost
             # this url value is just an example, and is likely wrong for your environment!
-            url: http://localhost:8080
+            url: http://localhost:2368
 
     mariadb:
         image: mariadb:10.3

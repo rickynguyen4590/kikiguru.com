@@ -1,11 +1,23 @@
 {{!< default}}
-<div class="content-area">
-    <main class="site-main">
-        <div class="post-feed">
-            {{#foreach posts visibility="all"}}
-                {{> "loop"}}
-            {{/foreach}}
+
+<div class="container">
+    <div class="row">
+        <div class="content-column col-xl-9 col-lg-8">
+            <div class="content-area">
+                <main class="site-main">
+                    <div class="post-feed">
+                        {{#foreach posts visibility="all"}}
+                            {{> "loop"}}
+                        {{/foreach}}
+                    </div>
+                    {{pagination}}
+                </main>
+            </div>
         </div>
-        {{pagination}}
-    </main>
+        <div class="sidebar-column col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md">
+            {{> widgets/widgets}}
+        </div>
+    </div>
 </div>
+
+

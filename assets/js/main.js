@@ -16,7 +16,7 @@ $(function () {
 });
 
 function idle(cb, time) {
-    time = time || 1000 + Math.random() * 4000
+    time = time || 500 + Math.random() * 2500
     setTimeout(cb, time);
 }
 
