@@ -1,5 +1,5 @@
 .post {
-    margin-bottom: 75px;
+    margin-bottom: 40px;
 }
 
 .post-media {
@@ -24,7 +24,7 @@
 }
 
 .post-header {
-    margin-bottom: 20px;
+
 }
 
 .post-title {
@@ -33,7 +33,7 @@
 }
 
 .post-header.big-title .post-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
@@ -118,6 +118,22 @@
     content: "\e933";
 }
 
+.post-author-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.single-post .post-author-meta{
+    justify-content: center;
+}
+
+.post-author-meta .post-author {
+    margin-right: .5rem;
+}
+
 .post-author {
     display: flex;
     align-items: center;
@@ -174,9 +190,10 @@
         font-size: 13px;
     }
 
-    .post-image.u-object-fit{
+    .post-image.u-object-fit {
         object-fit: contain;
     }
+
     .post-media.large {
         margin-bottom: 30px;
     }

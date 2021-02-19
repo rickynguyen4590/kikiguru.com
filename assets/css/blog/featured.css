@@ -1,9 +1,23 @@
 .featured-posts {
-    margin: 45px 0;
+    margin-bottom: 40px;
+    display: flex;
+    min-height: 400px;
 }
 
 .featured-posts .post {
-    margin-bottom: 0;
+    margin: 0 5px;
+    height: 100%;
+    flex: 4;
+    background: rgb(26,26,26);
+    background: linear-gradient(180deg, rgba(26,26,26,0.5998774509803921) 0%, rgba(241,241,241,0.27494747899159666) 38%);
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
+}
+
+.featured-posts .post:first-child {
+    flex: 8;
+    box-shadow: none;
 }
 
 .featured-posts .post-header,
@@ -11,9 +25,6 @@
     margin-bottom: 0;
 }
 
-.featured-posts .post-header {
-    text-align: center;
-}
 
 @media (max-width: 767px) {
     .featured-posts {

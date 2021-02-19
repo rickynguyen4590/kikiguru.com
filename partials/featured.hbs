@@ -1,13 +1,25 @@
-{{#get "posts" filter="featured:true" limit="10" include="tags" as |featured|}}
+{{#get "posts" filter="featured:true" limit="1" include="tags" as | featured|}}
     {{#if featured}}
         <div class="container">
-            <div class="featured-posts carousel owl">
-                {{#foreach featured visibility="all"}}
-                    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                        {{> post-media static_image=true small_image=true ratio="square" show_tag=true}}
-                        {{> post-header hide_meta=true}}
-                    </article>
-                {{/foreach}}
+            <div class="row">
+                <div class="featured-posts">
+                    {{#foreach featured visibility="all"}}
+                        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+                            {{> post-media static_image=true ratio="horizontal" small_image=true show_tag=true}}
+                            {{> post-header hide_meta=true}}
+                            {{#if @fisrt}}
+                                <div class="post-excerpt">
+                                    {{excerpt words="1"}}
+                                </div>
+                            {{/if}}
+                            {{#unless @fisrt}}
+                                <div class="post-excerpt">
+                                    {{excerpt words="44"}}
+                                </div>
+                            {{/unless}}
+                        </article>
+                    {{/foreach}}
+                </div>
             </div>
         </div>
     {{/if}}
