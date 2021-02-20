@@ -47,7 +47,10 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
 
 .post-meta-item + .post-meta-item::before {
@@ -59,6 +62,7 @@
 .post-tag {
     min-width: 50px;
     display: inline-block;
+    padding: 10px 2px;
     color: var(--primary-color);
 }
 
@@ -198,7 +202,7 @@
         margin-bottom: 30px;
     }
 
-    .post:not(.single-post) .post-title {
-        font-size: 20px !important;
+    .post-author-meta .post-author {
+        display: none;
     }
 }

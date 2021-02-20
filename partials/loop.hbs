@@ -1,17 +1,16 @@
-
-    <article class="row {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-        <div class="col-xl-5">
-            {{> post-media ratio="horizontal"}}
-        </div>
-        <div class="col-xl-7">
-            {{> post-header big_title=true hide_meta=true}}
-            {{#if excerpt}}
-                <div class="post-excerpt">
-                    {{excerpt words="33"}}
-                </div>
-            {{/if}}
-            <div class="mt-1">
-                {{> post-meta}}
+<article class="row {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+    <div class="col-xl-5">
+        {{> post-media ratio="horizontal"}}
+    </div>
+    <div class="col-xl-7">
+        {{> post-header big_title=true hide_meta=true}}
+        {{#if excerpt}}
+            <div class="post-excerpt">
+                {{excerpt words="33"}}
             </div>
+        {{/if}}
+        <div class="mt-1">
+            {{> post-meta}}
         </div>
-    </article>
+    </div>
+</article>

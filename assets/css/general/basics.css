@@ -169,3 +169,10 @@ hr::before {
 hr::after {
     left: 20px;
 }
+
+
+@media (min-width: 1170px) {
+    body {
+        font-size: 14pt;
+    }
+}

@@ -1,12 +1,11 @@
 {{!< default}}
 
 <div class="container">
+    {{#is "home"}}
+        {{> featured}}
+    {{/is}}
     <div class="row">
-        <div class="content-column col-xl-9 col-lg-8">
-            {{#is "home"}}
-                {{> featured}}
-            {{/is}}
-
+        <div class="content-column col-xl-9 col-lg-8 col-12">
             <div class="content-area">
                 <main class="site-main">
                     <div class="post-feed container">
