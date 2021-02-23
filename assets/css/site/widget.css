@@ -76,22 +76,38 @@
 .widget-recent .post-date {
     margin-top: 3px;
 }
+
 .widget-facebook {
     min-height: 150px;
 }
+
 .widget-facebook .loading {
     display: inline-block;
     width: 50px;
 }
+
 .widget-facebook .icon {
     font-size: 40px;
     opacity: 0.8;
 }
-.widget-facebook blockquote{
+
+.widget-facebook blockquote {
     border: none;
     position: unset;
     background: unset;
     text-align: center;
+}
+
+.widget-friends .friend {
+    color: var(--mid-gray-color);
+    font-size: 12pt;
+}
+
+.widget-friends .friend-name {
+
+}
+
+.widget-friends .friend-desc {
 }
 
 @media (max-width: 767px) {
