@@ -2,7 +2,11 @@
     {{#if featured}}
         <div class="row featured-posts">
             {{#foreach featured visibility="all"}}
-                {{> "post-card"}}
+                {{#if @first}}
+                    {{> "post-card"}}
+                {{else}}
+                    {{> "post-card" noContent=true}}
+                {{/if}}
             {{/foreach}}
         </div>
     {{/if}}
