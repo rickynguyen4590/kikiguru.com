@@ -4,12 +4,12 @@
 
     <div class="row">
         <div class="content-column col-xl-9 col-lg-8 col-12">
-            {{#is "home"}}
-                {{> featured}}
-            {{/is}}
             <div class="content-area">
                 <main class="site-main">
                     <div class="post-feed container">
+                        {{#is "home"}}
+                            {{> featured}}
+                        {{/is}}
                         {{#foreach posts visibility="all"}}
                             {{> "loop"}}
                         {{/foreach}}
