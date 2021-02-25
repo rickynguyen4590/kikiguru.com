@@ -1,20 +1,8 @@
 .featured-posts {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
-
-/*.featured-posts .post {*/
-/*    padding: 0 5px;*/
-/*    height: 100%;*/
-/*    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);*/
-/*    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);*/
-/*    border-radius: 2px;*/
-/*}*/
-
-/*.featured-posts .post:first-child {*/
-/*    box-shadow: none;*/
-/*}*/
 
 .featured-posts .post-header,
 .featured-posts .post-title {
