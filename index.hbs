@@ -7,18 +7,25 @@
             <div class="content-area">
                 <main class="site-main">
                     <div class="post-feed container">
-                        <div class="row">
-                            {{#foreach posts visibility="all" from=0 to=4}}
-                                {{#if @first}}
-                                    {{> "post-card"}}
-                                {{else}}
-                                    {{> "post-card" noContent=true}}
-                                {{/if}}
+                        {{#is "home"}}
+                            <div class="row">
+                                {{#foreach posts visibility="all" from=0 to=4}}
+                                    {{#if @first}}
+                                        {{> "post-card"}}
+                                    {{else}}
+                                        {{> "post-card" noContent=true}}
+                                    {{/if}}
+                                {{/foreach}}
+                            </div>
+                            {{#foreach posts visibility="all" from=5}}
+                                {{> "loop"}}
                             {{/foreach}}
-                        </div>
-                        {{#foreach posts visibility="all" from=5}}
-                            {{> "loop"}}
-                        {{/foreach}}
+                        {{/is}}
+                        {{#is "paged"}}
+                            {{#foreach posts visibility="all"}}
+                                {{> "loop"}}
+                            {{/foreach}}
+                        {{/is}}
                     </div>
                     {{pagination}}
                 </main>
