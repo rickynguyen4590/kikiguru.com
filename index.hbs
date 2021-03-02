@@ -7,10 +7,16 @@
             <div class="content-area">
                 <main class="site-main">
                     <div class="post-feed container">
-                        {{#is "home"}}
-                            {{> featured}}
-                        {{/is}}
-                        {{#foreach posts visibility="all"}}
+                        <div class="row">
+                            {{#foreach posts visibility="all" from=0 to=4}}
+                                {{#if @first}}
+                                    {{> "post-card"}}
+                                {{else}}
+                                    {{> "post-card" noContent=true}}
+                                {{/if}}
+                            {{/foreach}}
+                        </div>
+                        {{#foreach posts visibility="all" from=5}}
                             {{> "loop"}}
                         {{/foreach}}
                     </div>

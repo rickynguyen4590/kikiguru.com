@@ -1,5 +1,8 @@
 <aside class="widget-area">
-    {{> widgets/widget-recent}}
+    {{#is "post"}}
+        {{> widgets/widget-recent}}
+    {{/is}}
+    {{> widgets/widget-feature}}
     {{> widgets/widget-tags}}
     {{> widgets/widget-facebook}}
     {{> widgets/widget-friends}}

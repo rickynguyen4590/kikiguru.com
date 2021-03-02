@@ -1,6 +1,6 @@
 {{#get "posts" filter="featured:true" limit="4" include="tags" as | featured|}}
     {{#if featured}}
-        <div class="row featured-posts">
+        <div class="row">
             {{#foreach featured visibility="all"}}
                 {{#if @first}}
                     {{> "post-card"}}
