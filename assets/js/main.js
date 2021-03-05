@@ -2,23 +2,29 @@ var html = $('html');
 var body = $('body');
 
 $(function () {
-    idle(loadFb);
-    idle(loadGG);
+    idleLong(loadFb);
+    idleLong(loadGG);
     darkMode();
     idle(carousel);
-    idle(modal, 300);
-    idle(search, 310);
+    idle(modal, 200);
+    idle(search, 250);
     video();
     gallery();
     author();
-    idle(offCanvas);
-    idle(highlight);
+    idle(offCanvas, 10);
+    idle(highlight, 10);
 });
 
 function idle(cb, time) {
     time = time || 500 + Math.random() * 2500
     setTimeout(cb, time);
 }
+
+function idleLong(cb, time) {
+    time = time || 1500 + Math.random() * 4000
+    setTimeout(cb, time);
+}
+
 
 function loadFb() {
     const script = document.createElement('script');
