@@ -132,6 +132,10 @@
     list-style-type: none;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .flex-center {
     display: flex;
     text-align: center;
