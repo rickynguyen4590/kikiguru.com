@@ -131,6 +131,7 @@
     padding: 0;
     list-style-type: none;
 }
+
 .flex-center {
     display: flex;
     text-align: center;
@@ -335,22 +336,31 @@
 .u-text-format blockquote + * {
     margin-top: 30px;
 }
+
 .mt-1 {
     margin-top: 0.5rem;
 }
+
 .px-0 {
     padding-left: 0;
     padding-right: 0;
 }
+
 .mx-1 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
     .u-placeholder {
         background: none;
     }
+
     .u-placeholder.horizontal::before {
         padding-bottom: 62.5%;
     }
@@ -360,6 +370,7 @@
 .loading {
     position: relative;
 }
+
 .loading:after, .loading:before {
     content: "";
     position: absolute;
@@ -368,6 +379,7 @@
     border-radius: 50%;
     opacity: 0.8;
 }
+
 .loading:after {
     left: -0.5em;
     top: -0.25em;
@@ -377,6 +389,7 @@
     animation: loading 1s linear infinite;
     opacity: 0.6;
 }
+
 .loading:before {
     left: -1.25em;
     top: -0.75em;

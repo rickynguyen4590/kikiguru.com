@@ -1,6 +1,6 @@
-<a class="logo" href="{{@site.url}}">
+<a class="logo" href="{{@site.url}}" title="{{@site.title}}-{{@site.description}}">
     {{#if @site.logo}}
-        <img width="100" class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+        <img width="100" class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}-{{@site.description}}">
     {{else}}
         <span class="logo-text">{{@site.title}}</span>
     {{/if}}
