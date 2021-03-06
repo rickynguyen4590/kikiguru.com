@@ -25,6 +25,7 @@
     margin-top: 8px;
     max-width: 550px;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 @media (max-width: 767px) {
